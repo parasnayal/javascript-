@@ -25,7 +25,7 @@ const arr3 = arr1.concat(arr2);
 // start: It is optional. The index position to start copying elements from (default is 0).
 // end: It is optional. The index position to stop copying elements from (default is array.length).
 
-const newCopiedArray = arr1.copyWithin(0,2);
+// const newCopiedArray = arr1.copyWithin(0,2);
 // console.log(newCopiedArray,'newCopiedArray');
 // newCopiedArray[4].language = "c++";
 
@@ -42,4 +42,60 @@ const iteratorObject = arr1.entries();
 // arr1.fill(0,2,4);
 // console.log(arr1);
 
-// filter () =>
+// includes() => The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.When used on sparse arrays, the includes() method iterates empty slots as if they have the value undefined.
+
+// indexOf() =>The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.You cannot use indexOf() to search for empty slots in sparse arrays.
+
+// keys() => The keys() method returns a new Array Iterator object that contains the keys for each index in the array.When used on sparse arrays, the keys() method iterates empty slots as if they have the value undefined
+
+// Unlike Object.keys(), which only includes keys that actually exist in the array, the keys() iterator doesn't ignore holes representing missing propertie
+const key = arr2.keys();
+console.log(key.next().value,'key')
+
+const arr4 = [10,20,,30,40];
+console.log(...arr4);
+const sparseKeys = Object.keys(arr4);
+console.log(sparseKeys,'sparseKeys')
+for(const keys of arr4.keys()){
+    console.log(keys);
+}
+
+// pop() => The pop() method removes the last element from an array and returns that element. This method changes the length of the array.The removed element from the array; undefined if the array is empty.The pop() method is a mutating method. It changes the length and the content of array.n case you want the value of this to be the same, but return a new array with the last element removed, you can use arr.slice(0, -1) instead.
+
+const ele = arr2.pop();
+// console.log(ele,'ele');
+// console.log(arr2.length);
+
+// push() => The push() method adds one or more elements to the end of an array and returns the new length of the array.The push() method is a mutating method. It changes the length and the content of array.In case you want the value of this to be the same, but return a new array with elements appended to the end, you can use arr.concat() instead. 
+
+// reverse() => The reverse() method reverses an array in place and returns the reference to the same array.The reverse() method preserves empty slots
+const arr5 = [1,2,3,4,5];
+const reverseArray = arr5.reverse();
+
+// console.log(reverseArray,'reverse')
+// reverseArray[0] = 100;
+// console.log(arr5)
+// console.log(arr4.reverse())
+
+// shift() => The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.he removed element from the array; undefined if the array is empty.In case you want the value of this to be the same, but return a new array with the first element removed, you can use arr.slice(1) instead.
+
+
+// *************** slice() **********************
+// slice() => The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.The slice() method preserves empty slots. If the sliced portion is sparse, the returned array is sparse as well.
+
+const slicedArray = arr1.slice(0,3);
+console.log(slicedArray,'slicedArray');
+
+
+// ********* Sort() *********************
+// splice() =>The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.and return value is an array containing the deleted elements.If the deleted portion is sparse, the array returned by splice() is sparse as well
+const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+// const removedElement = myFish.splice(1,3,'shark');
+// console.log(myFish)
+// console.log(removedElement)
+
+// toString() => The toString() method returns a string representing the specified array and its elements.
+
+const newString = myFish.toString();
+// console.log(newString)
+// unshift() => The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
