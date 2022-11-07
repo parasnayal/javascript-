@@ -42,4 +42,27 @@ const iteratorObject = arr1.entries();
 // arr1.fill(0,2,4);
 // console.log(arr1);
 
-// filter () =>
+// filter () =>The filter() method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+// console.log(result);
+// console.log([1, , undefined].filter((x) => x === undefined));
+
+// find () => The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.Empty slots in sparse arrays behave the same as undefined.
+
+// findIndex() => The findIndex() method returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.Empty slots in sparse arrays behave the same as undefined.
+
+// flat() => The flat(depth) method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.The flat() method ignores empty slots if the array being flattened is sparse.returns a shallow copy that contains the same elements as the ones from the original array
+
+const arr7 = [0, 1, 2, [[[3, 4]]]];
+
+// console.log(arr7.flat(3));
+
+// flatMap() => The flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level.
+const arr8 = [1, 2, [3], [4, 5], 6, []];
+
+const flattened = arr8.flatMap(num => num);
+console.log(flattened)
+
+// forEach() => The forEach() method executes a provided function once for each array element and return value is undefined. It is not invoked for empty slots in sparse arrays.forEach() does not mutate the array on which it is called
