@@ -4,26 +4,4 @@
 // const newArray = arr1.map(item=>item*2);
 // console.log(arr1,'arr1');
 // console.log(newArray,'newArray');
-const arr = [10, 20, 30, 40, 50];
-const newArray = [];
 
-const addElement = (arr, ele, ind) => {
-    let nextElem ;
-arr.map((item,index)=>{
-    
-    if(index === ind){ 
-        // nextElem = item; 
-        arr.push(ele)
-    }
-    else if(index > ind){
-        arr.push(item)
-    }
-    else{
-        arr.push(item);
-    }
-    
-})
-}
-
-addElement(arr, 10000, 2);
-console.log(arr);
