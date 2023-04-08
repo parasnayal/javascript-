@@ -1,47 +1,59 @@
-console.log(" This tutorial is all about the map and weakmap in javascript ");
-// The map object holds key - value pairs and remember the original insertion order of keys.The data type of keys can be object and primitive.
-let map = new Map();
+// The Map object holds key-value pairs and remember the original insertion order of the keys.Any value (both objects and primitive values) may be used as either a key or a value.
 
-//console.log(map);
+const map1 = new Map();
+map1.set('a',10);
+map1.set('b','20');
+map1.set('c',30);
+map1.set('obj',{firstName:"Paras",lastName:"Nayal",role:"developer"})
 
-const key1 = "string";
-const key2 = {};
-const key3 = function(){};
+console.log(map1)
 
-// Set value in the map object
-map.set(key1,"This is a string")
-map.set(key2,"This is a empty object")
-map.set(key3,"This is a empty function")
-console.log(map);
+// Returns a specified element from the Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object
+const getValue = map1.get('a');
+const getValue2 = map1.get('obj')
+const sizeOfMapObject = map1.size
+console.log(getValue)
+console.log(getValue2);
+console.log(sizeOfMapObject);
 
-// Get the value from map object 
-console.log(map.get(key1));
-console.log(map.get(key2));
+// Return => true if an element in the Map existed and has been removed, or false if the element does not exist.
+// const deleteElement = map1.delete('obj')
+// console.log(deleteElement)
 
-// *******  ITERATION ******
-for(let [key,value] of map){
-    // console.log(`Key is => ${key}`);
-    // console.log(`value is => ${value}`);
-}
-for(let key of map.keys()){
-    // console.log(`key is => ${key}`);
-}
-for(let value of map.values()){
-    // console.log(`value is => ${value}`);
-}
-map.forEach((value,key)=>{
-    console.log(value);
-    console.log(key);
-});
+// Return value => undefined
+// const deleteAllElement = map1.clear();
+// console.log(deleteAllElement)
 
-let mymap = new Map([[{name:"paras"},"this is an object"],[[10,20],"This is an array"]]);
-console.log(mymap);
-console.log(mymap.size);
+// Returns an iterable of key, value pairs(in an insertion order) for every entry in the map.
+const iterator1 = map1.entries();
+console.log(iterator1)
+const firstIteratorvalue = iterator1.next().value
+const secondIteratorvalue = iterator1.next().value
+const thirdIteratorvalue = iterator1.next().value
+const fourthIteratorvalue = iterator1.next().value
+console.log(firstIteratorvalue)
+console.log(secondIteratorvalue)
+console.log(thirdIteratorvalue)
+console.log(fourthIteratorvalue)
 
-// WeakMap => A weak map is simmilar to map excepts the keys of a weakMap must be objects
-// (2) => elements of a weakmap can not be iterated
-// (3) => can not check the size of the weakmap
-let weakMap = new WeakMap([[{name:"nayal"},"This is an object"]]);
-// let weakMap2 = new WeakMap([["paras","This is an object"]]);
-console.log(weakMap);
-// console.log(weakMap2);
+// The forEach() method executes a provided function once per each key/value pair in the Map object, in insertion order. Return value => undefined.
+
+map1.forEach((value,key)=>{
+    console.log(value,'value inside the map object');
+    console.log(key,'Key inside the the map object');
+})
+// The has() method returns a boolean indicating whether an element with the specified key exists or not.
+const isElementPresent = map1.has('a');
+console.log(isElementPresent,'isElementPresent')
+
+// Returns an iterable of keys in the map in an insertion order
+const keyIterator = map1.keys()
+console.log(keyIterator)
+const keyIteratorValue = keyIterator.next().value
+console.log(keyIteratorValue)
+
+// Returns an iterable of values in the map
+const valueIterator = map1.values();
+console.log(valueIterator)
+const valueIteratorValue = valueIterator.next().value;
+console.log(valueIteratorValue)
