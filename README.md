@@ -4,6 +4,28 @@ This project is organized as an interview-preparation notebook for JavaScript an
 
 ## How to Use
 
+Start with [JavaScript Runtime: Interview Notes](01-js-fundamentals/javascript-runtime.md), including expandable answers, output exercises, and a revision checklist.
+
+Next, study [Call Stack: Interview Notes](01-js-fundamentals/call-stack.md) before the event loop. Practice stack traces, synchronous calls, recursion, and error unwinding.
+
+Topic 3 is [Browser APIs / Web APIs](04-async-browser-web/browser-web-apis.md): timers, DOM events, fetch, and the browser's responsibilities.
+
+Topic 4 is [Synchronous vs Asynchronous JavaScript](04-async-browser-web/synchronous-vs-asynchronous.md): blocking, non-blocking behavior, callbacks, and result handling before queues.
+
+Topic 5 is [Macrotask Queue / Task Queue](04-async-browser-web/macrotask-queue.md): task sources, timer scheduling, DOM events, and why zero delay is not immediate.
+
+Topic 6 is [Microtask Queue](04-async-browser-web/microtask-queue.md): promise reactions, queueMicrotask, priority, nested microtasks, and queue draining, with eleven output exercises.
+
+Topic 7 is [Event Loop](04-async-browser-web/event-loop.md): combine the stack, host APIs, tasks, and microtasks through a complete scheduling walkthrough and five output exercises.
+
+Topic 8 is [Promises and the Event Loop](04-async-browser-web/promises-and-event-loop.md): states, returned values and promises, error recovery, cleanup, and microtask ordering in chains.
+
+Topic 9 is [queueMicrotask()](04-async-browser-web/queue-microtask.md): explicit scheduling, timing, promise comparisons, enqueue order, and practical batching.
+
+Topic 10 is [setTimeout()](04-async-browser-web/set-timeout.md): timer lifecycle, delay guarantees, promise ordering, nested timers, cancellation, and host differences.
+
+Topic 11 is [Microtask vs Macrotask](04-async-browser-web/microtask-vs-macrotask.md): a scheduling comparison table, DOM-event qualifications, and mixed output practice.
+
 Open `index.html` in a browser, choose a topic from the dropdown, and check the browser console for the examples.
 
 You can also run most standalone JavaScript files directly with Node.js:
