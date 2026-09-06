@@ -1,0 +1,13 @@
+{
+  "name": "javascript-interview-prep",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "node scripts/check-syntax.cjs"
+  },
+  "devDependencies": {
+    "prettier": "3.9.6"
+  }
+}

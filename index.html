@@ -1,67 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Interview Prep</title>
+    <style>
+      :root {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #172033;
+        background: #f6f7f9;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascripts Concepts</title>
-</head>
+      body {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 20px;
+      }
 
-<body>
-   <h1>DOCUMENT OBJECT MODEL</h1>
-   <a id="nav" href="index.html">HOME</a>
-   <h1>An element node</h1>
-   <!-- a comment node -->
-   A text node
-</body>
-<!-- <script src="Array.js"></script> -->
-<!-- <script src="SparseArrayAndDenseArray.js"></script> -->
-<!-- <script src="ArrayLikeObject.js"></script> -->
-<!-- <script src="DataType.js"></script> -->
-<!-- <script src="Scope&Scope_Chain&Lexical_Scope.js"></script> -->
-<script src="Let_Const_Var.js"></script>
-<!-- <script src="Hoisting.js"></script> -->
-<!-- <script src="Closure.js"></script> -->
-<!-- <script src="Function.js"></script> -->
-<!-- <script src="Object.js"></script> -->
-<!-- <script src="ObjectProperties.js"></script> -->
-<!-- <script src="ObjectPrototype.js"></script> -->
-<!-- <script src="Classes.js"></script> -->
-<!-- <script src="Map.js"></script> -->
-<!-- <script src="ReduceMethod.js"></script> -->
-<!-- <script src="FilterMethod.js"></script> -->
-<!-- <script src="Destructuring.js"></script> -->
-<!-- <script src="Call_apply_Bind.js"></script> -->
-<!-- <script src="MapObject.js"></script> -->
-<!-- <script src="SetObject.js"></script> -->
-<!-- <script src="CallbackFunction.js"></script> -->
-<!-- <script src="Promise.js"></script> -->
-<!-- <script src="FetchApi.js"></script> -->
-<!-- <script src="Spread&Rest.js"></script> -->
-<!-- <script src="EventLoop.js"></script> -->
-<!-- <script src="Block&Shadowing.js"></script> -->
-<!-- <script src="TemporalDeadZone.js"></script> -->
-<!-- <script src="Symbol.js"></script> -->
-<!-- <script src="Generator.js"></script> -->
-<!-- <script src="Iterators.js"></script> -->
-<!-- <script src="DOM.js"></script> -->
-<!-- <script src="API&RESTAPI.js"></script> -->
-<!-- <script src="String.js"></script> -->
-<!-- <script src="MemoryAllocation.js"></script> -->
-<!-- <script src="callByValue.js"></script> -->
-<!-- <script src="callByReference.js"></script> -->
-<!-- <script src="ShallowCopy.js"></script> -->
-<!-- <script src="InOperator.js"></script> -->
-<!-- <script src="For_of.js"></script> -->
-<!-- <script src="For_in.js"></script> -->
-<!-- <script src="Operator.js"></script> -->
-<!-- <script src="OptionalChainingOperator.js"></script> -->
-<!-- <script src="Shallow&deepComparison.js"></script> -->
-<!-- <script src="ObjectMethods.js"></script> -->
-<!-- <script src="Output.js"></script> -->
-<!-- <script src="Currying.js"></script> -->
-<!-- <script src="ObjectEquality.js"></script> -->
-<!-- <script src="Memoization.js"></script> -->
+      h1 {
+        margin-bottom: 8px;
+      }
 
+      .panel {
+        background: #ffffff;
+        border: 1px solid #d9dee7;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 24px;
+      }
+
+      label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      select {
+        width: 100%;
+        max-width: 560px;
+        padding: 10px 12px;
+        border: 1px solid #b8c0cc;
+        border-radius: 6px;
+        font-size: 16px;
+        background: #ffffff;
+      }
+
+      code {
+        background: #eef1f5;
+        border-radius: 4px;
+        padding: 2px 6px;
+      }
+
+      .note {
+        color: #445066;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>JavaScript Interview Prep</h1>
+    <p class="note">
+      Choose one topic, then open the browser console to see its output.
+    </p>
+
+    <section class="panel">
+      <label for="topic">Active topic</label>
+      <select id="topic">
+        <option value="">Select a topic file</option>
+        <optgroup label="01 - JavaScript Fundamentals">
+          <option value="01-js-fundamentals/data-types.js">Data types</option>
+          <option value="01-js-fundamentals/variables-let-const-var.js">
+            let, const, var
+          </option>
+          <option value="01-js-fundamentals/hoisting.js">Hoisting</option>
+          <option value="01-js-fundamentals/scope-chain-lexical-scope.js">
+            Scope, scope chain, lexical scope
+          </option>
+          <option value="01-js-fundamentals/block-scope-shadowing.js">
+            Block scope and shadowing
+          </option>
+          <option value="01-js-fundamentals/temporal-dead-zone.js">
+            Temporal dead zone
+          </option>
+          <option value="01-js-fundamentals/closures.js">Closures</option>
+          <option value="01-js-fundamentals/functions.js">Functions</option>
+          <option value="01-js-fundamentals/call-apply-bind.js">
+            call, apply, bind
+          </option>
+          <option value="01-js-fundamentals/operators.js">Operators</option>
+          <option value="01-js-fundamentals/optional-chaining.js">
+            Optional chaining
+          </option>
+          <option value="01-js-fundamentals/not-defined-vs-undefined.js">
+            not defined vs undefined
+          </option>
+          <option value="01-js-fundamentals/call-by-value.js">
+            Call by value
+          </option>
+          <option value="01-js-fundamentals/call-by-reference.js">
+            Call by reference
+          </option>
+          <option value="01-js-fundamentals/memory-allocation.js">
+            Memory allocation
+          </option>
+        </optgroup>
+        <optgroup label="02 - Arrays, Strings, Iteration">
+          <option value="02-arrays-strings-iteration/arrays.js">Arrays</option>
+          <option value="02-arrays-strings-iteration/sparse-vs-dense-arrays.js">
+            Sparse and dense arrays
+          </option>
+          <option value="02-arrays-strings-iteration/array-like-objects.js">
+            Array-like objects
+          </option>
+          <option value="02-arrays-strings-iteration/strings.js">
+            Strings
+          </option>
+          <option value="02-arrays-strings-iteration/array-map.js">
+            Array map
+          </option>
+          <option value="02-arrays-strings-iteration/array-filter.js">
+            Array filter
+          </option>
+          <option value="02-arrays-strings-iteration/array-reduce.js">
+            Array reduce
+          </option>
+          <option value="02-arrays-strings-iteration/for-in.js">
+            for...in
+          </option>
+          <option value="02-arrays-strings-iteration/for-of.js">
+            for...of
+          </option>
+          <option value="02-arrays-strings-iteration/spread-rest.js">
+            Spread and rest
+          </option>
+          <option value="02-arrays-strings-iteration/destructuring.js">
+            Destructuring
+          </option>
+        </optgroup>
+        <optgroup label="03 - Objects and Prototypes">
+          <option value="03-objects-prototypes/objects.js">Objects</option>
+          <option value="03-objects-prototypes/object-properties.js">
+            Object properties
+          </option>
+          <option value="03-objects-prototypes/object-methods.js">
+            Object methods
+          </option>
+          <option value="03-objects-prototypes/object-prototype.js">
+            Object prototype
+          </option>
+          <option value="03-objects-prototypes/object-equality.js">
+            Object equality
+          </option>
+          <option value="03-objects-prototypes/shallow-copy.js">
+            Shallow copy
+          </option>
+          <option value="03-objects-prototypes/shallow-vs-deep-comparison.js">
+            Shallow and deep comparison
+          </option>
+          <option value="03-objects-prototypes/in-operator.js">
+            in operator
+          </option>
+          <option value="03-objects-prototypes/classes.js">Classes</option>
+        </optgroup>
+        <optgroup label="04 - Async, Browser, Web">
+          <option value="04-async-browser-web/callbacks.js">Callbacks</option>
+          <option value="04-async-browser-web/promises.js">Promises</option>
+          <option value="04-async-browser-web/fetch-api.js">Fetch API</option>
+          <option value="04-async-browser-web/event-loop.js">Event loop</option>
+          <option value="04-async-browser-web/dom.js">DOM</option>
+          <option value="04-async-browser-web/api-rest-api.js">
+            API and REST API
+          </option>
+        </optgroup>
+        <optgroup label="05 - ES6+ and Advanced Patterns">
+          <option value="05-es6-advanced-patterns/map-object.js">
+            Map object
+          </option>
+          <option value="05-es6-advanced-patterns/set-object.js">
+            Set object
+          </option>
+          <option value="05-es6-advanced-patterns/symbol.js">Symbol</option>
+          <option value="05-es6-advanced-patterns/generators.js">
+            Generators
+          </option>
+          <option value="05-es6-advanced-patterns/iterators.js">
+            Iterators
+          </option>
+          <option value="05-es6-advanced-patterns/currying.js">Currying</option>
+          <option value="05-es6-advanced-patterns/memoization.js">
+            Memoization
+          </option>
+        </optgroup>
+        <optgroup label="06 - Practice">
+          <option value="06-practice-output/output-questions.js">
+            Output questions
+          </option>
+        </optgroup>
+      </select>
+
+      <p class="note">Current script: <code id="active-file">none</code></p>
+    </section>
+
+    <section class="panel">
+      <h2>DOM practice area</h2>
+      <a id="nav" href="index.html">Home</a>
+      <p id="demo-text">
+        Use this page for DOM, event, and browser API examples.
+      </p>
+    </section>
+
+    <script>
+      const topicSelect = document.querySelector("#topic");
+      const activeFile = document.querySelector("#active-file");
+      const params = new URLSearchParams(window.location.search);
+      const selectedFile = params.get("file") || "";
+
+      topicSelect.value = selectedFile;
+      activeFile.textContent = selectedFile || "none";
+
+      if (selectedFile) {
+        const script = document.createElement("script");
+        script.src = selectedFile;
+        document.body.append(script);
+      }
+
+      topicSelect.addEventListener("change", () => {
+        if (!topicSelect.value) {
+          window.location.href = window.location.pathname;
+          return;
+        }
+
+        const nextParams = new URLSearchParams();
+        nextParams.set("file", topicSelect.value);
+        window.location.search = nextParams.toString();
+      });
+    </script>
+  </body>
 </html>
